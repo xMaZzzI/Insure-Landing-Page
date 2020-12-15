@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'DM Serif Display', serif;
+}
+/* Mobile first */
+
+header #top-bar{
+    background-color: #ffffff;
+    height: 5rem;
+}
+
+header #top-bar .logo{
+    position: absolute;
+    left: 1.5rem;
+    top: 2rem
+}
+
+header #top-bar nav .menu-icon{
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+header #top-bar nav ul{
+    position: relative;
+    top: 5rem;
+    background-color: #2b282f;
+    height: calc(100vh - 8rem);
+    text-align: center;
+    padding: 3rem 0 0 0;
+}
+
+header #top-bar nav ul li{ 
+    list-style-type: none;
+}
+
+header #top-bar nav ul li a{ 
+    text-decoration: none;
+    list-style-type: none;
+    color: #ffffff;
+}
