@@ -12,9 +12,19 @@ h1, h2, h3, h4, h5, h6{
 .default-btn{
     background: none;
     border: solid .125rem;
+    letter-spacing: .1rem;
     text-transform: uppercase;
     color: #ffffff;
+    font-family: 'Karla', sans-serif;
 }
+
+.bck-img-top-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1
+}
+
 /* Mobile first */
 
 header{
@@ -93,13 +103,6 @@ header #header-text{
     position: relative;
 }
 
-header #header-text .header-bck-img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1
-}
-
 header #header-text .header-bck-img2{
     position: absolute;
     bottom: 0;
@@ -118,6 +121,128 @@ header #header-text h1{
 header #header-text .default-btn{
     position: relative;
     padding: 0.75rem 1.75rem;
-    letter-spacing: .25rem;
     z-index: 2;
+}
+
+#about{
+    text-align: center;
+    padding: 8rem 2rem;
+}
+
+#about h2{
+    font-size: 2rem;
+    position: relative;
+    font-weight: 400;
+}
+
+#about h2::before{
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9rem;
+    height: .08rem;
+    background-color: #b8a2b9;
+}
+
+#about .about-el .about-el-img{
+    width: 5rem;
+    padding: 2rem 0;
+}
+
+#about .about-el .about-el-header{
+    font-weight: 400;
+}
+
+#about .about-el .about-el-desc{
+    color: #b5b5b7
+}
+
+#banner{
+    background-color: #2c2640;
+    height: 17rem;
+    margin: 0 1.5rem 8rem 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+#banner h2{
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+#banner .default-btn{
+    padding: 0.6rem 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+
+#banner #banner-img{
+    height: 15rem;
+    position: absolute;
+    top: 0;
+    right:0;
+    z-index: 1;
+}
+
+footer{
+    text-align: center;
+    background-color: #fafafa;
+    padding: 5rem 0;
+    position: relative;
+}
+
+footer .logo{
+    position: relative;
+    z-index: 2;
+}
+
+footer #social-media{
+    padding: 2.2rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+footer #social-media .social-media-icon{
+    padding: 0 0.25rem;
+    position: relative;
+    z-index: 2;
+}
+
+footer #social-media::after{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 80%;
+    height: .08rem;
+    background-color: #b5b5b7;
+}
+
+footer .footer-block{
+    margin-top: 2.5rem;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: 0.1rem;
+}
+
+footer .footer-block .footer-block-header{
+    font-family: 'Karla', sans-serif;
+    color: #b5b5b7;
+}
+
+footer .footer-block .footer-links{
+    padding: 0
+}
+
+footer .footer-block .footer-links li{
+    list-style-type: none;
+    padding: 0.5rem 0;
+    font-weight: 800;
 }
