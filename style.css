@@ -310,6 +310,7 @@ footer #footer-nav .footer-block .footer-links li{
         text-align: justify;
         position: relative;
         margin-left: 3rem;
+        width: 100%;
     }
 
     header #header-container #header-text h1::before{
@@ -487,5 +488,11 @@ footer #footer-nav .footer-block .footer-links li{
     }
     footer{
         padding: 0rem 10rem 2rem 10rem;
+    }
+}
+
+@media screen and (min-width: 1999px){
+    header #header-container{
+        justify-content: space-between;
     }
 }

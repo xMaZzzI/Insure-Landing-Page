@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Insure landing page</title>
   </head>
@@ -96,6 +97,7 @@
             class="header-img"
             alt="header-img"
             src="./images/image-intro-desktop.jpg"
+            data-aos="fade-left"
           />
         </picture>
 
@@ -146,6 +148,7 @@
             class="about-el-img"
             src="./images/icon-snappy-process.svg"
             alt="snappy-process-img"
+            data-aos="zoom-in"
           />
           <h3 class="about-el-header">Snappy Process</h3>
           <p class="about-el-desc">
@@ -158,6 +161,7 @@
             class="about-el-img"
             src="./images/icon-affordable-prices.svg"
             alt="affordable-prices-img"
+            data-aos="zoom-in"
           />
           <h3 class="about-el-header">Affordable Prices</h3>
           <p class="about-el-desc">
@@ -170,6 +174,7 @@
             class="about-el-img"
             src="./images/icon-people-first.svg"
             alt="people-first-img"
+            data-aos="zoom-in"
           />
           <h3 class="about-el-header">People First</h3>
           <p class="about-el-desc">
@@ -277,5 +282,9 @@
       </div>
 
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
