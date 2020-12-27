@@ -22,7 +22,8 @@ h1, h2, h3, h4, h5, h6{
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1
+    z-index: 1;
+    max-width: 100%;
 }
 
 /* Mobile first */
@@ -90,12 +91,18 @@ header #top-bar nav ul li .default-btn{
     height: 3.5rem
 }
 
-header .header-img{
-    width: 100%;
-    display: block;
+header #header-container{
+    position: relative;
 }
 
-header #header-text{
+header #header-container .header-img{
+    width: 100%;
+    display: block;
+    max-width: 540px;
+    position: relative;
+}
+
+header #header-container #header-text{
     padding: 4rem 1.625rem;
     background-color: #2c2640;
     color: #ffffff;
@@ -103,7 +110,7 @@ header #header-text{
     position: relative;
 }
 
-header #header-text .header-bck-img2{
+header #header-container .header-bck-img2{
     position: absolute;
     bottom: 0;
     right: 0;
@@ -112,13 +119,13 @@ header #header-text .header-bck-img2{
     height: 13rem
 }
 
-header #header-text h1{
+header #header-container #header-text h1{
     position: relative;
     font-weight: 400;
     z-index: 2;
 }
 
-header #header-text .default-btn{
+header #header-container #header-text .default-btn{
     position: relative;
     padding: 0.75rem 1.75rem;
     z-index: 2;
@@ -146,16 +153,16 @@ header #header-text .default-btn{
     background-color: #b8a2b9;
 }
 
-#about .about-el .about-el-img{
+#about #about-container .about-el .about-el-img{
     width: 5rem;
     padding: 2rem 0;
 }
 
-#about .about-el .about-el-header{
+#about #about-container .about-el .about-el-header{
     font-weight: 400;
 }
 
-#about .about-el .about-el-desc{
+#about #about-container .about-el .about-el-desc{
     color: #b5b5b7
 }
 
@@ -168,15 +175,22 @@ header #header-text .default-btn{
     position: relative;
 }
 
-#banner h2{
+#banner #banner-content{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+    z-index: 2;
+}
+
+#banner #banner-content h2{
     font-weight: 400;
     font-size: 2rem;
-    padding: 2rem 0 1rem 0;
+    padding: 1rem .5rem 1rem .5rem;
     position: relative;
     z-index: 2;
 }
 
-#banner .default-btn{
+#banner #banner-content .default-btn{
     padding: 0.6rem 1.2rem;
     position: relative;
     z-index: 2;
@@ -197,24 +211,28 @@ footer{
     position: relative;
 }
 
-footer .logo{
+footer #footer-container .logo{
     position: relative;
     z-index: 2;
 }
 
-footer #social-media{
+footer #footer-container #social-media{
     padding: 2.2rem 0;
     position: relative;
     z-index: 2;
 }
 
-footer #social-media .social-media-icon{
+footer #footer-container #social-media .social-media-icon{
     padding: 0 0.25rem;
     position: relative;
     z-index: 2;
 }
 
-footer #social-media::after{
+footer #footer-container{
+    position: relative;
+}
+
+footer #footer-container::after{
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -225,24 +243,201 @@ footer #social-media::after{
     background-color: #b5b5b7;
 }
 
-footer .footer-block{
+footer #footer-nav .footer-block{
     margin-top: 2.5rem;
     text-transform: uppercase;
     font-size: .8rem;
     letter-spacing: 0.1rem;
 }
 
-footer .footer-block .footer-block-header{
+footer #footer-nav .footer-block .footer-block-header{
     font-family: 'Karla', sans-serif;
     color: #b5b5b7;
 }
 
-footer .footer-block .footer-links{
+footer #footer-nav .footer-block .footer-links{
     padding: 0
 }
 
-footer .footer-block .footer-links li{
+footer #footer-nav .footer-block .footer-links li{
     list-style-type: none;
     padding: 0.5rem 0;
     font-weight: 800;
+}
+
+@media screen and (min-width: 540px){
+    header #header-container .header-img{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    header #header-container .bck-img-top-left{
+        width: 5rem;
+    }
+}
+
+@media screen and (min-width: 572px){
+    header #header-container .header-img{
+        padding-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 768px){
+
+    header #header-container{
+        display: flex;
+        align-items: center;
+        align-content: space-around;
+        flex-direction: row-reverse;
+        justify-content: center;
+        margin: 0 3rem;
+    }
+    header .bck-img-top-left{
+        left: -3rem;
+        bottom: 0;
+        top: auto;
+        transform: translateY(50%);
+    }
+
+    header #header-container .header-bck-img2{
+        top: 0;
+        transform: none;
+        bottom: auto;
+        right: -3rem;
+    }
+
+    header #header-container #header-text{
+        padding-left: 0;
+        text-align: justify;
+        position: relative;
+    }
+
+    header #header-container #header-text h1::before{
+        position: absolute;
+        content: "";
+        top: -2rem;
+        width: 5rem;
+        height: .08rem;
+        background-color: #ffffff;
+    }
+
+    header #header-container .header-img{
+        transform: none;
+        left: auto;
+        padding: 0;
+        height: 20rem;
+        width: auto;
+    }
+}
+
+@media (min-width: 1024px) {  
+    header #top-bar .logo{
+        left: 3rem;
+    }
+    header #top-bar nav .menu-icon{
+        display: none;
+    }
+
+    header #top-bar nav ul{
+        display: flex;
+        top: auto;
+        justify-content: flex-end;
+        height: 5rem;
+        padding: 0;
+        align-items: center;
+        margin: 0 3rem 0 0;
+        background-color: inherit;
+
+    }
+    header #top-bar nav ul li{
+        height: auto;
+        padding: 0 1rem;
+    }
+
+    header #top-bar nav ul li:last-child{
+        padding-right: 0;
+    } 
+
+    header #top-bar nav ul li a{
+        color: #7c7a7d;
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+    }
+
+    header #top-bar nav ul li .default-btn{
+        height: 2rem;
+        width: 100%;
+        color: #2b282f;
+        font-weight: 800;
+    }
+
+    #about{
+        padding: 8rem 3rem;
+        text-align: justify;
+    }
+    #about h2::before{
+        left: auto;
+        transform: none;
+    }
+
+    #about #about-container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #about #about-container .about-el{
+        padding-right: 3rem;
+    }
+
+    #about #about-container .about-el:last-child{
+        padding-right: 0;
+    }
+
+    #banner{
+        text-align: left;
+        margin: 0 3rem 8rem 3rem;
+        height: 12rem;
+    }
+
+    #banner #banner-content{
+        display: flex;
+        margin: 0 5rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #banner #banner-content h2{
+        padding: 0;
+        width: 40%;
+    }
+
+    #banner #banner-content .default-btn{
+        height: 2rem;
+        padding: 0 1.2rem;
+    }
+    #banner #banner-img{
+        height: 12rem;
+    }
+
+    footer{
+        padding: 5rem 3rem;
+        text-align: left;
+    }
+
+    footer #footer-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer #footer-container::after{
+        width: 100%;
+    }
+
+    footer #footer-nav{
+        display: flex;
+    }
+
+    footer #footer-nav .footer-block{
+        margin-right: 10rem;
+    }
 }
