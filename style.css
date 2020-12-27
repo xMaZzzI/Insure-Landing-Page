@@ -241,6 +241,7 @@ footer #footer-container::after{
     width: 80%;
     height: .08rem;
     background-color: #b5b5b7;
+    z-index: 2;
 }
 
 footer #footer-nav .footer-block{
@@ -282,14 +283,13 @@ footer #footer-nav .footer-block .footer-links li{
 }
 
 @media screen and (min-width: 768px){
-
     header #header-container{
         display: flex;
         align-items: center;
         align-content: space-around;
         flex-direction: row-reverse;
         justify-content: center;
-        margin: 0 3rem;
+        margin: 0;
     }
     header .bck-img-top-left{
         left: -3rem;
@@ -309,6 +309,7 @@ footer #footer-nav .footer-block .footer-links li{
         padding-left: 0;
         text-align: justify;
         position: relative;
+        margin-left: 3rem;
     }
 
     header #header-container #header-text h1::before{
@@ -324,12 +325,14 @@ footer #footer-nav .footer-block .footer-links li{
         transform: none;
         left: auto;
         padding: 0;
-        height: 20rem;
+        height: 25rem;
+        max-height: 650px;
         width: auto;
+        margin-right: 3rem;
     }
 }
 
-@media (min-width: 1024px) {  
+@media screen and (min-width: 1024px) {  
     header #top-bar .logo{
         left: 3rem;
     }
@@ -419,7 +422,7 @@ footer #footer-nav .footer-block .footer-links li{
     }
 
     footer{
-        padding: 5rem 3rem;
+        padding: 0 3rem 2rem 3rem;
         text-align: left;
     }
 
@@ -435,9 +438,54 @@ footer #footer-nav .footer-block .footer-links li{
 
     footer #footer-nav{
         display: flex;
+        z-index: 2;
+        position: relative;
     }
 
     footer #footer-nav .footer-block{
+        margin-right: 8rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    header #top-bar .logo{
+        left: 10rem;
+    }
+    header #top-bar nav ul{
+        margin: 0 10rem 0 0;
+    }
+    header #header-container #header-text{
+        margin-left: 10rem;
+    }
+    header #header-container #header-text h1{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    header #header-container .header-bck-img2{
+        right: 0;
+        height: 30rem;
+    }
+    header #header-container .bck-img-top-left{
+        left: -10rem;
+        bottom: -10rem;
+        width: 10rem;
+    }
+    header #header-container .header-img{
+        top: 11rem;
+        height: auto;
+        max-height: 650px;
         margin-right: 10rem;
+    }
+    header #header-container #header-text h1::before{
+        width: 6rem;
+    }
+    #about{
+        padding: 20rem 10rem 0rem 10rem;
+    }
+    #banner{
+        margin: 8rem 10rem 8rem 10rem
+    }
+    footer{
+        padding: 0rem 10rem 2rem 10rem;
     }
 }
