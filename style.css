@@ -63,14 +63,33 @@ header #top-bar nav ul{
     height: calc(100vh - 8rem);
     text-align: center;
     padding: 3rem 0 0 0;
+    z-index: 4;
     display: none;
+    margin: 0;
+}
+
+header #top-bar nav.open ul{
+    display: block;
+}
+
+header #top-bar nav.open .close-icon{
+    display: block;
+}
+
+header #top-bar nav.open .hamburger-icon{
+    display: none;
+}
+
+header #top-bar nav.open .nav-mobile-img{
+    display: block;
 }
 
 header #top-bar nav .nav-mobile-img{
     position: absolute;
-    bottom: -1rem;
+    bottom: 0;
     width: 100%;
-    height: 12rem;
+    max-height: 50%;
+    z-index: 4;
     display: none;
 }
 
@@ -330,6 +349,9 @@ footer #footer-nav .footer-block .footer-links li{
         max-height: 650px;
         width: auto;
         margin-right: 3rem;
+    }
+    header #top-bar nav .nav-mobile-img{
+        bottom:  -1rem;
     }
 }
 
